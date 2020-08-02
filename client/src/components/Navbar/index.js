@@ -17,10 +17,10 @@ class Navbar extends Component {
         <Link className="navbar-brand" to="/">
           Joanne's Home Bakery
         </Link>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span className="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <div className="collapse navbar-collapse" id="navbarNavDropdown">
           <ul className="navbar-nav">
               <li className="nav-item">
                   <Link

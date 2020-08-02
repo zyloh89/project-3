@@ -6,7 +6,7 @@ class Footer extends Component {
     return (
       <>
       <div className="container">
-      <footer class="footer">
+      <footer className="footer">
         <div className={style.footercontainer}>
           <div className={style.footertext}>
           <span>Life's too short to say no to cake!</span>
