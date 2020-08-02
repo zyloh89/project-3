@@ -3,10 +3,10 @@ const Schema = mongoose.Schema;
 
 const quoteSchema = new Schema({
   productType: { 
-      type: String, 
+      type: [String], 
       required: true 
     },
-  numberOfGuest: { 
+  numberOfGuests: { 
       type: String, 
       required: true 
     },
@@ -22,15 +22,11 @@ const quoteSchema = new Schema({
       type: String, 
       required: true 
     },
-  cakeSize: { 
-      type: String, 
-      required: true 
-    },
-  datePickup: { 
-      type: String, 
-      required: true 
-    },
-  numberOfGuest: { 
+  // cakeSize: { 
+  //     type: String, 
+  //     required: true 
+  //   },
+  dateAndTimePickup: { 
       type: String, 
       required: true 
     },

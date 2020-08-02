@@ -1,0 +1,17 @@
+.footercontainer {
+    display: flex;
+    height: 300px;
+    width: 100vw;
+    max-width: 100%;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Merriweather', serif;
+    background-color: #ffd9cc;
+  }
+  
+  .footertext {
+    color: black;
+    text-align: center;
+  }
+

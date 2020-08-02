@@ -1,0 +1,59 @@
+.logincontainer {
+    height: 600px;
+    width: 100vw;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #ffd9cc;
+    font-family: 'Roberto', serif;
+  }
+  
+  .logininner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 700px;
+    height: 400px;
+    border: 1px solid black;
+    border-radius: 50px;
+    background-color: #f2ded2;
+  }
+  
+  .logintitle {
+    padding-top: 40px;
+  }
+  
+  .formcon {
+    height: 300px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .input {
+    border: solid 1px black;
+    width: 350px;
+    margin-top: 20px;
+    border-radius: 2px;
+  }
+  
+  .subinput {
+    width: 125px;
+    height: 32px;
+    border-radius: 4px;
+  }
+  
+  .submitcon {
+    margin: 20px 0px;
+  }
+  
+  .error {
+    margin-top: 250px;
+    position: absolute;
+    width: 400px;
+  }

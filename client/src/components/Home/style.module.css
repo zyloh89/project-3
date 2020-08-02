@@ -1,0 +1,117 @@
+.homecontainer {
+    height: 800px;
+    width: 100vw;
+    max-width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffd9cc;
+  }
+  
+  .gallerycontainer {
+    height: 750px;
+    width: 750px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+  }
+  
+  .galleryone {
+    justify-self: center;
+    background-image: url('./assets/cake_01.jpg');
+    background-size: cover;
+    height: 300px;
+    width: 300px;
+  }
+  
+  .gallerytwo {
+    justify-self: center;
+    background-image: url('./assets/cake_02.jpg');
+    background-size: cover;
+    height: 300px;
+    width: 300px;
+  }
+  
+  .gallerythree {
+    justify-self: center;
+    background-image: url('./assets/cake_03.jpg');
+    background-size: cover;
+    height: 300px;
+    width: 300px;
+  }
+  
+  .galleryfour {
+    justify-self: center;
+    background-image: url('./assets/cake_04.jpg');
+    background-size: cover;
+    height: 300px;
+    width: 300px;
+  }
+  
+  .galleryfive {
+    justify-self: center;
+    background-image: url('./assets/cake_05.jpg');
+    background-size: cover;
+    height: 300px;
+    width: 300px;
+  }
+  
+  .gallerysix {
+    justify-self: center;
+    background-image: url('./assets/cake_06.jpg');
+    background-size: cover;
+    height: 300px;
+    width: 300px;
+  }
+  
+  .galleryseven {
+    justify-self: center;
+    background-image: url('./assets/cake_07.jpg');
+    background-size: cover;
+    height: 300px;
+    width: 300px;
+  }
+  
+  .galleryeight {
+    justify-self: center;
+    background-image: url('./assets/cake_08.jpg');
+    background-size: cover;
+    height: 300px;
+    width: 300px;
+  }
+  
+  .gallerynine {
+    justify-self: center;
+    background-image: url('./assets/cake_09.jpg');
+    background-size: cover;
+    height: 300px;
+    width: 300px;
+  }
+
+  .galleryten {
+    justify-self: center;
+    background-image: url('./assets/cake_10.jpg');
+    background-size: cover;
+    height: 300px;
+    width: 300px;
+  }
+
+  .galleryeleven {
+    justify-self: center;
+    background-image: url('./assets/cake_11.jpg');
+    background-size: cover;
+    height: 300px;
+    width: 300px;
+  }
+
+  .gallerytwelve {
+    justify-self: center;
+    background-image: url('./assets/cake_12.jpg');
+    background-size: cover;
+    height: 300px;
+    width: 300px;
+  }

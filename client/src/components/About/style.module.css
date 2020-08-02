@@ -1,0 +1,36 @@
+.aboutcontainer {
+    height: 400px;
+    width: 100vw;
+    max-width: 100%;
+    background-color: #ffd9cc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.aboutcontent {
+height: 300px;
+width: 500px;
+font-family: 'Merriweather', serif;
+font-size: 19px;
+overflow: scroll;
+overflow-x: hidden;
+scrollbar-width: none;
+-ms-overflow-style: none;
+}
+
+.aboutcontent::-webkit-scrollbar {
+width: 0;
+height: 0;
+}
+
+.abouttitle h1 {
+font-family: 'Merriweather', serif;
+font-size: 40px;
+}
+
+.aboutpara {
+display: flex;
+justify-content: center;
+align-items: center;
+}
