@@ -26,7 +26,7 @@ This is a MERN-stack application for where customers can request for a quote for
 
 ## Authors
 
-* ### [Ziyen Loh](https://github.com/zyloh89)
+* [Ziyen Loh](https://github.com/zyloh89)
 
 
 ## [License](LICENSE.md)
