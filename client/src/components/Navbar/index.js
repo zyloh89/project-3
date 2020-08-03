@@ -20,9 +20,9 @@ class Navbar extends Component {
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon"></span>
       </button>
-      <div className="collapse navbar-collapse" id="navbarNavDropdown">
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul className="navbar-nav">
-              <li className="nav-item">
+              {/* <li className="nav-item">
                   <Link
                   to="Home"
                   className={
@@ -33,7 +33,7 @@ class Navbar extends Component {
                   >
                   Home
                   </Link>
-              </li>
+              </li> */}
               <li className="nav-item">
                   <Link
                   to="About"
@@ -65,7 +65,7 @@ class Navbar extends Component {
               {authentication ? (
                 <li className="nav-item">
                     <Link
-                    to="/contact"
+                    to="/admin"
                     className={window.location.pathname === "/admin" ? "nav-link active" : "nav-link"}
                     >
                     Admin
@@ -85,7 +85,7 @@ class Navbar extends Component {
               {authentication ? (
                 <li className="nav-item" onClick={this.handleLogout}>
                     <Link
-                    to="/login"
+                    to="/logout"
                     className={window.location.pathname === "/logout" ? "nav-link active" : "nav-link"}
                     >
                     Logout

@@ -4,7 +4,7 @@ import _ from 'lodash';
 import QuoteData from './quoteData/quoteData';
 const axios = require('axios')
 
-class Dashboard extends Component {
+class Admin extends Component {
   state = {
     allQuotes: [],
     orderBy: "",
@@ -99,6 +99,6 @@ class Dashboard extends Component {
   }
 }
 
-export default Dashboard;
+export default Admin;
 
 

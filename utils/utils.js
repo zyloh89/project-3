@@ -37,7 +37,7 @@ const generateUser = async (
 
 const generateAccessToken = ({ contact: { email } }) => {
   return jwt.sign({ contact: { email } }, process.env.JWT_SECRET, {
-    expiresIn: "7d"
+    expiresIn: "14d"
   });
 };
 
@@ -55,15 +55,12 @@ const checkAccessToken = (req, res, next) => {
 };
 
 const createFakeData = numberOfData => {
-  let productTypes = ["standard cake", "custom cake", "cokkies", "chocolate"];
+  let productTypes = ["standard cake", "custom cake"];
   let occasionTypes = [
     "birthday",
-    "wedding",
-    "baby born",
-    "graduation",
-    "winning something"
+    "wedding"
   ];
-  let flavourTypes = ["chocolate", "vanilla", "ube", "strawberry", "maple"];
+  let flavourTypes = ["chocolate", "vanilla", "strawberry"];
 
   let data = [];
   for (i = 0; i < numberOfData; i++) {

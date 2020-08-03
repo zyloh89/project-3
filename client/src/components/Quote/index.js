@@ -19,10 +19,11 @@ class Quote extends Component {
       });
     }
   };
-
+  
   handleQuote = async (e) => {
     e.preventDefault();
     const result = await this.props.createNewQuote(this.state);
+    console.log(result)
     if (result) {
       this.props.history.push('/')
     }

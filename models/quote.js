@@ -20,7 +20,6 @@ const quoteSchema = new Schema({
     },
   cakeFilling: { 
       type: String, 
-      required: true 
     },
   // cakeSize: { 
   //     type: String, 

@@ -88,17 +88,14 @@ const createNewQuote = async (req, res) => {
     } = userInput;
 
     const newUser = await new User({
-      userName: {
         firstName,
-        lastName
-      },
-      contact: {
+        lastName,
         email,
         phoneNumber
-      }
     });
 
     const savedUser = await newUser.save();
+    console.log(savedUser)
 
     const newQuote = await new Quote({
       productType,
@@ -110,7 +107,10 @@ const createNewQuote = async (req, res) => {
       otherInfo,
       user: savedUser._id
     });
+    console.log(newQuote);
+
     const savedQuote = await newQuote.save();
+    console.log(savedQuote);
 
     res.send(savedQuote);
     

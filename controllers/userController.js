@@ -5,24 +5,25 @@ const {
   generateAccessToken
 } = require("../utils/utils.js");
 
-const validationSchema = Joi.object().keys({
-  firstName: Joi.string()
-    .alphanum()
-    .required(),
-  lastName: Joi.string()
-    .alphanum()
-    .required(),
-  email: Joi.string()
-    .email({ minDomainSegments: 2 })
-    .required(),
-  phoneNumber: Joi.string()
-    .min(10)
-    .max(12)
-    .required(),
-  password: Joi.string()
-    .min(8)
-    .required()
-});
+// Not implementing user signup
+// const validationSchema = Joi.object().keys({
+//   firstName: Joi.string()
+//     .alphanum()
+//     .required(),
+//   lastName: Joi.string()
+//     .alphanum()
+//     .required(),
+//   email: Joi.string()
+//     .email({ minDomainSegments: 2 })
+//     .required(),
+//   phoneNumber: Joi.string()
+//     .min(10)
+//     .max(12)
+//     .required(),
+//   password: Joi.string()
+//     .min(8)
+//     .required()
+// });
 
 const login = async (req, res) => {
     const { email, password } = req.body;
