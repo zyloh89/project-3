@@ -20,25 +20,12 @@ class Navbar extends Component {
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <div className="collapse navbar-collapse" id="navbarNavDropdown">
           <ul className="navbar-nav">
-              {/* <li className="nav-item">
-                  <Link
-                  to="Home"
-                  className={
-                      window.location.pathname === "/" || window.location.pathname === "/about"
-                      ? "nav-link active"
-                      : "nav-link"
-                  }
-                  >
-                  Home
-                  </Link>
-              </li> */}
               <li className="nav-item">
                   <Link
-                  to="About"
-                  className={
-                      window.location.pathname === "/" || window.location.pathname === "/about"
+                  to="/about"
+                  className={window.location.pathname === "/about"
                       ? "nav-link active"
                       : "nav-link"
                   }
@@ -48,8 +35,10 @@ class Navbar extends Component {
               </li>
               <li className="nav-item">
                   <Link
-                  to="/Quote"
-                  className={window.location.pathname === "/order" ? "nav-link active" : "nav-link"}
+                  to="/quote"
+                  className={window.location.pathname === "/quote" 
+                  ? "nav-link active" 
+                  : "nav-link"}
                   >
                   Quote
                   </Link>
@@ -57,7 +46,9 @@ class Navbar extends Component {
               <li className="nav-item">
                   <Link
                   to="/contact"
-                  className={window.location.pathname === "/contact" ? "nav-link active" : "nav-link"}
+                  className={window.location.pathname === "/contact" 
+                  ? "nav-link active" 
+                  : "nav-link"}
                   >
                   Contact
                   </Link>
@@ -66,7 +57,9 @@ class Navbar extends Component {
                 <li className="nav-item">
                     <Link
                     to="/admin"
-                    className={window.location.pathname === "/admin" ? "nav-link active" : "nav-link"}
+                    className={window.location.pathname === "/admin" 
+                    ? "nav-link active" 
+                    : "nav-link"}
                     >
                     Admin
                     </Link>
@@ -76,7 +69,9 @@ class Navbar extends Component {
                 <li className="nav-item">
                     <Link
                     to="/login"
-                    className={window.location.pathname === "/login" ? "nav-link active" : "nav-link"}
+                    className={window.location.pathname === "/login" 
+                    ? "nav-link active" 
+                    : "nav-link"}
                     >
                     Login
                     </Link>
@@ -85,8 +80,10 @@ class Navbar extends Component {
               {authentication ? (
                 <li className="nav-item" onClick={this.handleLogout}>
                     <Link
-                    to="/logout"
-                    className={window.location.pathname === "/logout" ? "nav-link active" : "nav-link"}
+                    to="/"
+                    className={window.location.pathname === "/logout" 
+                    ? "nav-link active" 
+                    : "nav-link"}
                     >
                     Logout
                     </Link>

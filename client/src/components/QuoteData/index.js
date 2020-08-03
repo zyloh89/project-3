@@ -44,9 +44,9 @@ class QuoteDetails extends Component {
           <div className={style.quotedetailcontainer}>
             <div className={style.userinfocontainer}>
               <h3>User Info</h3>
-              <p>Name: {oneQuote.user.userName.firstName} {oneQuote.user.userName.lastName}</p>
-              <p>Phone Number: {oneQuote.user.contact.phoneNumber}</p>
-              <p>Email: {oneQuote.user.contact.email}</p>
+              <p>Name: {oneQuote.firstName} {oneQuote.lastName}</p>
+              <p>Phone Number: {oneQuote.phoneNumber}</p>
+              <p>Email: {oneQuote.email}</p>
             </div>
             <div className={style.dateinfo}>
               <h3>Date Info</h3>

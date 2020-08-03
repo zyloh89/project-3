@@ -32,11 +32,13 @@ class Admin extends Component {
     this.setState({ order : e.target.value });
   }
   render() {
+
     let { orderBy, order, allQuotes }  = this.state
     allQuotes  = _.orderBy(allQuotes, orderBy, order)
 
     const items = allQuotes.map((item, index) =>{
       return (
+        
       <QuoteData 
         data={ item }
         key={ item._id }
@@ -57,14 +59,15 @@ class Admin extends Component {
     } else {
       return (
         <>
+        <div className="container">
         <div className={style.dashcont}>
           <h1 className={style.dashtitle}>All Quotes</h1>
           <div className={style.sortbutton}>
             <select value={this.state.value} onChange={this.doOrderBy}>
               <option value="" selected disable hidden>Sort By Category</option>
-              <option value="user.userName.firstName">First Name</option>
-              <option value="user.userName.lastName">Last Name</option>
-              <option value="user.contact.phoneNumber">Phone Number</option>
+              <option value="firstName">First Name</option>
+              <option value="lastName">Last Name</option>
+              <option value="phoneNumber">Phone Number</option>
               <option value="pickUpDateAndTime">Estimated Pick Up</option>
               <option value="createdAt">Created At</option>
             </select>
@@ -91,6 +94,7 @@ class Admin extends Component {
               </tbody>
             </table>
           </div>
+        </div>
         </div>
         </>
       )
