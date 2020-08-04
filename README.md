@@ -1,6 +1,5 @@
-# Joanne's Home Bakery
-
-## [Visit The Site!](https://)
+# Jo's Homemade Cakes
+## [Visit The Site!](https://jos-homemade-cakes.herokuapp.com/) (currently not working)
 
 ## Description
 
@@ -17,7 +16,7 @@ This is a MERN-stack application for where customers can request for a quote for
 * **Mongodb** 
 * **BootstrapCSS**
 * **React**
-* **JSON Web Tokens**
+* **Firebase Auth**
 * **Node.js**
 * **Express**
 * **Moment.js**
