@@ -45,7 +45,6 @@ class Routes extends React.Component {
               );
           }}
           />
-
           <Route path="/Login" render={this.handleLogin} />
           {authentication ? (
           <Route

@@ -1,12 +1,11 @@
 const express = require("express");
 const path = require("path");
-
-const app = require ("./api");
+const app = require ("./api"); // Define API routes here
 const mongoose = require("mongoose");
+
 require('dotenv').config();
 
 const PORT = process.env.PORT || 3001;
-
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
@@ -15,8 +14,6 @@ app.use(express.json());
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
-
-// Define API routes here
 
 
 // Connect to the Mongo DB

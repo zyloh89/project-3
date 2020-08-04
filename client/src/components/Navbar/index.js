@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import logo from "./assets/logo2.png";
+import "./style.css"
 
 class Navbar extends Component {
   state = {};
@@ -13,9 +15,10 @@ class Navbar extends Component {
     const { authentication } = this.props;
     return (
       <div className="container">
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <nav className="navbar navbar-expand-md navbar-light">
         <Link className="navbar-brand" to="/">
-          Joanne's Home Bakery
+          <img src={logo} className= "logoNavbar" alt="Jo's Homemade Cakes" />
+
         </Link>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon"></span>

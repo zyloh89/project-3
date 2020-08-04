@@ -6,7 +6,8 @@
     flex-flow: column;
     justify-content: center;
     align-items: center;
-    font-family: 'Merriweather', serif;
+    font-family: 'Pacifico', serif;
+    padding-top: 100px;
     background-color: #ffd9cc;
   }
   

@@ -1,20 +1,19 @@
 import React, { Component } from "react"
 import { Redirect } from 'react-router-dom'
-import style from './style.module.css'
+import firebase from './firebase'
+import style from "./style.module.css"
 
 
 class Login extends Component {
-  state = {}
-  
-  handleInput = e => {
-    this.setState({
-      [e.target.id]: e.target.value
-    })
-  }
 
   handleLogin = e => {
     e.preventDefault()
     this.props.login(this.state)
+    const provider = new firebase.auth.GoogleAuthProvider();
+   
+    firebase.auth().signInWithPopup(provider).then(result => {
+      console.log(result);
+    })
   }
 
   render() {
@@ -28,7 +27,7 @@ class Login extends Component {
               <h1 className={style.logintitle}>Login</h1>
               <div className={style.formcon}>
                 <form>  
-                  <input className={style.input} placeholder="Email"
+                  {/* <input className={style.input} placeholder="Email"
                     type="text"
                     name="email"
                     id="email"
@@ -39,14 +38,14 @@ class Login extends Component {
                     name="password"
                     id="password"
                     onChange={this.handleInput}
-                  />
+                  /> */}
                   <div className={style.submitcon}>
-                    <input className={style.subinput} type="submit" value="Login" onClick={this.handleLogin} />
+                    <input className={style.subinput} type="submit" value="Login with Google" onClick={this.handleLogin} />
                   </div>
                 </form>
-                <div className={style.error}>
+                {/* <div className={style.error}>
                   {this.props.errorMessage && <p>{this.props.errorMessage}</p>}
-                </div>            
+                </div>             */}
               </div>
 
 

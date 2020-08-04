@@ -1,0 +1,23 @@
+.navbar{
+    background-color: #F9F2F6;
+    height: 150px;
+    /* background-size: 1550px 550px ; */
+    border-bottom: solid;
+    border-color: #ff967d;
+    padding: 5%;
+}
+
+.navbar-collapse {
+    display:flex;
+}
+
+.nav-item {
+    font-size: 20px;
+    font-family: "Pacifico"
+}
+
+.logoNavbar{
+    height:100px;
+    margin-right: 20px;
+}
+

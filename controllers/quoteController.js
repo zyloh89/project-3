@@ -118,6 +118,7 @@ const createNewQuote = async (req, res) => {
     res.send(savedQuote);
     
   } catch (validationError) {
+    console.log(validationError)
     const errorMessage = validationError.details.map(d => d.message);
     res.status(400).send(`Validation Error(s) => ${errorMessage}`);
   }

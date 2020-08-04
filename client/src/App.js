@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+// import UserProvider from "./providers/UserProvider";
+import firebase from "./components/Login/firebase";
+// import {auth} from "./components/Login/firebase";
 import Routes from "./Routes";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -6,6 +9,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
 const axios = require('axios')
+
 
 class App extends Component {
   state = {
@@ -32,7 +36,6 @@ class App extends Component {
   };
 
   createNewQuote = async quoteInfo => {
-    // const url = "http://localhost:3000";
     try {
       const data = await axios.post(`./quote/newQuote`, quoteInfo);
       if (data) {
@@ -46,11 +49,11 @@ class App extends Component {
   };
 
 
-  login = async userCredentials => {
-    // const url = "http://localhost:3000";
+  login = async () => {
     try {
-      const response = await axios.post(`./auth/login`, userCredentials);
-      const token = response.data.token;
+      const response = await firebase.auth.GoogleAuthProvider();
+      const token = response.getAuthResponse().id_token;
+      console.log(token)
       localStorage.setItem("token", token);
       this.setState({
         authentication: true
@@ -78,12 +81,15 @@ class App extends Component {
           authentication={authentication} 
           logout={this.logout} 
         />
+        {/* <UserProvider> */}
         <Routes 
+           
           authentication={authentication}
           login={this.login} 
           errorMessage={errorMessage}
           createNewQuote={this.createNewQuote}
         />
+        {/* </UserProvider> */}
         <Footer />
       </div>
     )
@@ -91,3 +97,35 @@ class App extends Component {
 }
 
 export default App;
+
+
+
+// import React, { useContext } from "react";
+// import { UserContext } from "../providers/UserProvider";
+// import {auth} from "../firebase";
+// const ProfilePage = () => {
+//   const user = useContext(UserContext);
+//   const {photoURL, displayName, email} = user;
+//   return (
+//     <div className = "mx-auto w-11/12 md:w-2/4 py-8 px-4 md:px-8">
+//       <div className="flex border flex-col items-center md:flex-row md:items-start border-blue-400 px-3 py-4">
+//         <div
+//           style={{
+//             background: `url(${photoURL || 'https://res.cloudinary.com/dqcsk8rsc/image/upload/v1577268053/avatar-1-bitmoji_upgwhc.png'})  no-repeat center center`,
+//             backgroundSize: "cover",
+//             height: "200px",
+//             width: "200px"
+//           }}
+//           className="border border-blue-300"
+//         ></div>
+//         <div className = "md:pl-4">
+//         <h2 className = "text-2xl font-semibold">{displayName}</h2>
+//         <h3 className = "italic">{email}</h3>
+//         </div>
+//       </div>
+//       <button className = "w-full py-3 bg-red-600 mt-4 text-white" onClick = {() => {auth.signOut()}}>Sign out</button>
+//     </div>
+//   ) 
+// };
+// export default ProfilePage;
+// As you can see, we used the useContext Hook to g
