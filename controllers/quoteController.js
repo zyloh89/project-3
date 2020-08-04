@@ -38,6 +38,7 @@ const getAllQuotes = async (req, res) => {
   const allQuotes = await Quote.find().populate("user");
   res.status(200).send(allQuotes);
 };
+console.log(getAllQuotes)
 
 // related to quoteData.js (GET request)
 const getOneQuote = async (req, res) => {
@@ -53,6 +54,8 @@ const getOneQuote = async (req, res) => {
     res.send(`There is an err: ${err}`);
   }
 };
+console.log(getOneQuote)
+
 const combineDateAndTime = (date, time) => {
   const combined = new Date(date + " " + time);
   return combined;
@@ -119,6 +122,7 @@ const createNewQuote = async (req, res) => {
     res.status(400).send(`Validation Error(s) => ${errorMessage}`);
   }
 };
+console.log(createNewQuote)
 
 module.exports = {
   getAllQuotes,

@@ -17,7 +17,7 @@ class App extends Component {
     try {
       const token = localStorage.getItem("token");
       const authentication = await axios.get(
-        `${process.env.REACT_APP_API_URL}/user/current-user`,
+        `./user/current-user`,
         { headers: { token: token } }
       );
       this.setState({
@@ -32,9 +32,9 @@ class App extends Component {
   };
 
   createNewQuote = async quoteInfo => {
-    const url = process.env.REACT_APP_API_URL;
+    // const url = "http://localhost:3000";
     try {
-      const data = await axios.post(`${url}/quote/newQuote`, quoteInfo);
+      const data = await axios.post(`./quote/newQuote`, quoteInfo);
       if (data) {
         return 'data posted'
       }
@@ -47,9 +47,9 @@ class App extends Component {
 
 
   login = async userCredentials => {
-    const url = process.env.REACT_APP_API_URL;
+    // const url = "http://localhost:3000";
     try {
-      const response = await axios.post(`${url}/auth/login`, userCredentials);
+      const response = await axios.post(`./auth/login`, userCredentials);
       const token = response.data.token;
       localStorage.setItem("token", token);
       this.setState({

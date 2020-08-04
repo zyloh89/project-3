@@ -22,21 +22,17 @@ const generateUser = async (
 ) => {
   const hash = await generateHash(password);
   const newUser = new User({
-    userName: {
       firstName: firstName,
-      lastName: lastName
-    },
-    contact: {
+      lastName: lastName,
       email: email,
-      phoneNumber: phoneNumber
-    },
+      phoneNumber: phoneNumber,    
     password: hash
   });
   return await newUser.save();
 };
 
-const generateAccessToken = ({ contact: { email } }) => {
-  return jwt.sign({ contact: { email } }, process.env.JWT_SECRET, {
+const generateAccessToken = ({ email }) => {
+  return jwt.sign({ email }, process.env.JWT_SECRET, {
     expiresIn: "14d"
   });
 };
