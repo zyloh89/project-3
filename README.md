@@ -3,7 +3,7 @@
 
 ## Description
 
-This is a MERN-stack application for where customers can request for a quote for a cake. The app has functionality for admin login to view database of quote placed. 
+This is an application for where customers can request for a quote for a cake. The app has functionality for admin login to view database of quote placed. 
 
 **User Story**
 * AS a home baker
