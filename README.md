@@ -22,6 +22,11 @@ This is a MERN-stack application for where customers can request for a quote for
 * **Moment.js**
 * **@hapi/joi** - for data validation
 
+## Screenshot
+
+![Screenshot](/screenshot.png?raw=true "screenshot")
+
+
 
 ## Authors
 
