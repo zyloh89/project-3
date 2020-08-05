@@ -24,7 +24,9 @@ This is a MERN-stack application for where customers can request for a quote for
 
 ## Screenshot
 
-![Screenshot](./screenshot.png?raw=true "screenshot")
+![Logo](misc/logo.png)
+
+![Screenshot](/screenshot.png)
 
 
 ## Authors
