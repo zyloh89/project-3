@@ -36,16 +36,32 @@ class App extends Component {
   };
 
   createNewQuote = async quoteInfo => {
-    try {
-      const data = await axios.post(`./quote/newQuote`, quoteInfo);
-      if (data) {
+    console.log(quoteInfo)
+    axios({
+      method: 'post',
+      url: './quote/newQuote',
+      data: quoteInfo,
+      headers: {},
+    }).then ((response) => {
         return 'data posted'
-      }
-    } catch (err) {
-      this.setState({
-        errorMessage: 'Please fill in all the fields!'
+        console.log(response);
+      }, (error) => {
+        console.log(error);
+        this.setState({
+          errorMessage: 'Please fill in all the fields!'
+        });
       });
-    }
+     
+    // try {
+    //   const data = await axios.post(`./quote/newQuote`, quoteInfo);
+    //   console.log(data)
+    //   if (data) {
+    //     return 'data posted'
+    //   }
+    // } catch (err) {
+    //   this.setState({
+    //     errorMessage: 'Please fill in all the fields!'
+    //   });
   };
 
 

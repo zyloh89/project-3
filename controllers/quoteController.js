@@ -65,11 +65,12 @@ const combineDateAndTime = (date, time) => {
 const createNewQuote = async (req, res) => {
   // The below codes are to combine two data(pickUpDate & pickUpTime) into one data(pickUpDateAndTime)
   let userInput = req.body;
+  console.log(userInput)
   userInput.pickUpDateAndTime = combineDateAndTime(
     req.body.pickUpDate,
     req.body.pickUpTime
   );
-
+    
   // delete two keys(pickUpDate & pickUpTime)
   delete userInput["pickUpDate"];
   delete userInput["pickUpTime"];
