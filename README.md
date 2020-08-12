@@ -3,7 +3,7 @@
 
 ## Description
 
-This is an application for where customers can request for a quote for a cake. The app has functionality for admin login to view database of quote placed. 
+This is an application where customers can request for a quote for a cake. The app has functionality for admin login to view database of quote placed. The idea came from a chat with my close friends who runs a cake business as a side job and received high amounts of cake order during the pandemic.
 
 **User Story**
 * AS a home baker
