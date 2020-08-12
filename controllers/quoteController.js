@@ -1,5 +1,5 @@
-const User = require("../models/User");
-const Quote = require("../models/Quote");
+const User = require("../models/user");
+const Quote = require("../models/quote");
 const ObjectId = require("mongoose").Types.ObjectId;
 const Joi = require("@hapi/joi");
 

@@ -2,7 +2,7 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const faker = require("faker");
 
-const User = require("../models/User");
+const User = require("../models/user");
 
 const generateHash = async password => {
   const saltRounds = 10;
