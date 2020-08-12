@@ -1,5 +1,5 @@
 # Jo's Homemade Cakes
-## [Visit The Site!](https://jos-homemade-cakes.herokuapp.com/) (work in progress)
+## [Visit The Site!](https://jos-homemade-cakes.herokuapp.com/)
 
 ## Description
 
